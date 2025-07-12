@@ -16,7 +16,8 @@ const Projects = () => {
         "Multi-language syntax highlighting and code execution",
         "Integrated chat and video calling features"
       ],
-      status: "In Development"
+      status: "In Development",
+      githuburl: "https://github.com/TanujKatyal/Codewith"
     },
     {
       title: "Custom C-like Language Compiler with Embedded Database",
@@ -29,7 +30,8 @@ const Projects = () => {
         "Embedded database for variable management",
         "Error handling and optimization features"
       ],
-      status: "Completed"
+      status: "Completed",
+      githuburl: "https://github.com/TanujKatyal/Compiler-Construction"
     },
     {
       title: "Traveling Salesman Problem - Parallel Processing",
@@ -42,7 +44,8 @@ const Projects = () => {
         "Performance comparison between serial and parallel execution",
         "Visualization of solution paths and convergence"
       ],
-      status: "Completed"
+      status: "Completed",
+      githuburl: "https://github.com/TanujKatyal/TSP-using-genetics-algorithm"
     },
     {
       title: "Intrusion Detection and Mitigation Framework",
@@ -55,7 +58,8 @@ const Projects = () => {
         "Real-time threat detection and response",
         "Advanced machine learning model optimization"
       ],
-      status: "Research Paper Published"
+      status: "Patent Published",
+      githuburl: ""
     }
   ];
 
@@ -63,7 +67,7 @@ const Projects = () => {
     switch (status) {
       case "Completed": return "bg-green-500/20 text-green-700 border-green-500/30";
       case "In Development": return "bg-blue-500/20 text-blue-700 border-blue-500/30";
-      case "Research Paper Published": return "bg-purple-500/20 text-purple-700 border-purple-500/30";
+      case "Patent Published": return "bg-purple-500/20 text-purple-700 border-purple-500/30";
       default: return "bg-gray-500/20 text-gray-700 border-gray-500/30";
     }
   };
@@ -132,6 +136,7 @@ const Projects = () => {
                     variant="outline" 
                     size="sm" 
                     className="border-primary text-primary hover:bg-primary/10"
+                    onClick={() => window.open(project.githuburl, "_blank")}
                   >
                     <Github className="mr-2 h-4 w-4" />
                     View Code
@@ -150,6 +155,7 @@ const Projects = () => {
             size="lg" 
             variant="outline"
             className="border-primary text-primary hover:bg-primary/10"
+            onClick={() => window.open("https://github.com/TanujKatyal", "_blank")}
           >
             <Github className="mr-2 h-5 w-5" />
             View All Projects on GitHub

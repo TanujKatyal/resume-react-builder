@@ -1,14 +1,28 @@
 import { Github, Linkedin, Mail, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroBg from "@/assets/hero-bg.jpg";
 
 const Hero = () => {
+  const handleDownloadResume = () => {
+    const link = document.createElement("a");
+    link.href = "/TanujKatyal.pdf"; // Make sure this matches your public file path
+    link.download = "TanujKatyal.pdf"; // Suggested filename
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
+  const scrollToSection = (href: string) => {
+    const element = document.querySelector(href);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroBg})` }}
       />
       
       {/* Overlay */}
@@ -34,6 +48,7 @@ const Hero = () => {
             <Button 
               size="lg" 
               className="bg-gradient-to-r from-primary to-primary-glow hover:shadow-glow transition-all duration-300 transform hover:scale-105"
+              onClick={() => scrollToSection("#contact")}
             >
               <Mail className="mr-2 h-5 w-5" />
               Get In Touch
@@ -43,6 +58,7 @@ const Hero = () => {
               variant="outline" 
               size="lg"
               className="border-primary text-primary hover:bg-primary/10 transition-all duration-300"
+              onClick={handleDownloadResume}
             >
               <Download className="mr-2 h-5 w-5" />
               Download Resume

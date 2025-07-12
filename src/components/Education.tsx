@@ -20,7 +20,7 @@ const Education = () => {
     },
     {
       title: "Research Publications",
-      description: "Published papers in IEEE and other conferences",
+      description: "Inventor of a published patent filed with the Indian Patent Office",
       icon: BookOpen
     },
     {
@@ -34,7 +34,7 @@ const Education = () => {
     "Microsoft Azure AI-900: AI Fundamentals",
     "The Web Developer Bootcamp 2024",
     "Introduction to MongoDB",
-    "AWS Cloud Practitioner (In Progress)"
+    "AWS Solutions Architect (In Progress)"
   ];
 
   const relevantCoursework = [

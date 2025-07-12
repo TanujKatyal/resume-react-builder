@@ -16,7 +16,7 @@ const About = () => {
     {
       icon: Award,
       title: "Research",
-      description: "Published research papers and IEEE publications in technology"
+      description: "Inventor of a published patent filed with the Indian Patent Office"
     },
     {
       icon: Target,
