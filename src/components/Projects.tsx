@@ -136,16 +136,6 @@ const Projects = () => {
                     <Github className="mr-2 h-4 w-4" />
                     View Code
                   </Button>
-                  {project.status !== "In Development" && (
-                    <Button 
-                      variant="outline" 
-                      size="sm" 
-                      className="border-accent text-accent hover:bg-accent/10"
-                    >
-                      <ExternalLink className="mr-2 h-4 w-4" />
-                      Live Demo
-                    </Button>
-                  )}
                 </div>
               </CardContent>
             </Card>
